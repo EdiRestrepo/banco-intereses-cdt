@@ -1,6 +1,7 @@
 public class CoperativaBC extends Banco {
 
 
+    private String nameBank = "CoperativaBC";
     private double interesCDT =0.0243;
     private double porcentajeDeducion = 0.0207;
     public CoperativaBC(double cantidadDinero, double tiempo) {

@@ -1,2 +1,3 @@
 # banco-intereses-cdt
-ejercicio
+
+![Ejercicio java](./src/ejercicio-java-intereses-banco.png)

@@ -1,8 +1,12 @@
+import java.text.DecimalFormat;
+
 public abstract class Banco {
 
-    private String nombreBanco;
     private double cantidadDinero;
     private double tiempo;
+
+    private static DecimalFormat df = new DecimalFormat("0.000");
+
     public Banco(double cantidadDinero, double tiempo) {
         this.cantidadDinero = cantidadDinero;
         this.tiempo = tiempo;
@@ -18,6 +22,14 @@ public abstract class Banco {
 
     public double calcularTotalNetoARetirar(){
         return calcularTotalARetirar()-calcularImpuestoAhorro();
+    }
+
+    public void printInformation(){
+        System.out.println("Interest: "+ df.format(calcularInteresCausado()));
+        System.out.println("Total withdraw: "+ df.format(calcularTotalARetirar()));
+        System.out.println("Savings Tax: "+ df.format(calcularImpuestoAhorro()));
+        System.out.println("Net witdraw: "+df.format(calcularTotalNetoARetirar()));
+        System.out.println("press enter to calculate another value or exit");
     }
 
     public double getCantidadDinero() {

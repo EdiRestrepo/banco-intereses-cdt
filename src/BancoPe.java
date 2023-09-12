@@ -1,6 +1,6 @@
 public class BancoPe extends Banco {
 
-
+    private String nameBank = "BancoPe";
     private double interesCDT =0.025;
     private double porcentajeDeducion = 0.013;
     public BancoPe(double cantidadDinero, double tiempo) {
